@@ -1,25 +1,42 @@
-
-
+/**
+ * @file   canbus.cpp
+ *
+ * @brief  	Brief description of the content of calculations.c
+ * @author 	kevin.perillo, Rotronic AG
+ * @date   	22.11.2023 - first implementation
+ * @version 1.0.0
+ * 
+ * MIT License
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ *
+ * Copyright (c) 2023 Rotronic AG
+ */
+ 
 #include "canbus.h"
 #include <mcp_can.h>
 
-/* Please modify SPI_CS_PIN to adapt to your board.
+// Define SPI CS Pin of MCP2515
+#define SPI_CS_PIN  9               // CS Pin on Adafurit RP2040 CAN Bus feather board 
 
-   CANBed V1        - 17
-   CANBed M0        - 3
-   CAN Bus Shield   - 9
-   CANBed 2040      - 9
-   CANBed Dual      - 9
-   OBD-2G Dev Kit   - 9
-   OBD-II GPS Kit   - 9
-   Hud Dev Kit      - 9
-
-   Seeed Studio CAN-Bus Breakout Board for XIAO and QT Py - D7
-*/
-
-#define SPI_CS_PIN  9 
-
-MCP_CAN CAN( SPI_CS_PIN );                                    // Set CS pin
+// Define MCP CAN object 
+MCP_CAN CAN( SPI_CS_PIN );                                    
 
 // ..........................................................................................
 /*
