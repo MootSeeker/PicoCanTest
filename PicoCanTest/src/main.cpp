@@ -1,8 +1,4 @@
 #include <Arduino.h>
-#include "canbus.h"
-
-// Declare can object with 500k Baudrate 
-canbus can( CAN_500K ); 
 
 void setup( ) 
 {
@@ -10,10 +6,13 @@ void setup( )
     Serial.begin( 115200 ); 
     // Check if debug interface is initialized without an error
     while( !Serial ); 
+
+    Serial.println(" Pico is working by Visual Studio "); 
 }
 
 void loop( ) 
 {
-
+    Serial.println( "Pico is working I don't know! "); 
+    delay( 1000 ); 
 }
 
