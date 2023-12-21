@@ -60,15 +60,9 @@ void setup( )
 
 void loop( ) 
 {
-    // Toggle LED to check functionality 
-    digitalWrite( 13, HIGH ); 
-    delay(250); 
-    digitalWrite(13, LOW ); 
-    delay(250); 
+    // Set RGB LED since nothing more important has to be done :)
 
-
-
-    rainbow(10);             // Flowing rainbow cycle along the whole strip
+    rainbow(10); // Flowing rainbow cycle along the whole strip
 }
 
 
