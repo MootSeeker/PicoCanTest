@@ -1,4 +1,8 @@
 #include <Arduino.h>
+#include <led.h>
+
+// Create LED object
+LED led( ); 
 
 void setup( ) 
 {

@@ -1,14 +1,19 @@
 #ifndef LED_H
 #define LED_H
 
-class LED_H
+#include "stdint.h"
+
+#define LED_PIN 13
+
+// LED class driver 
+class LED
 {
-    public:
+    public: 
+        LED( ); 
+        ~LED( ); 
 
-    private: 
-
-    protected:
-
+    private:
+        uint8_t led_value; 
 }; 
 
 #endif
