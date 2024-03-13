@@ -3,6 +3,9 @@
 
 #include <stdint.h>
 
+#ifdef ARDUINO_RASPBERRY_PI_PICO
+#include "MCP25625.h"
+#endif 
 
 /* special address description flags for the CAN_ID */
 #define CAN_EFF_FLAG 0x80000000UL /* EFF/SFF is set in the MSB */
